@@ -30,4 +30,26 @@ git switch -c <branch-name> // create a new branch and switch to it.
 git checkout -b <branch-name> // create a new branch and switch to it.
 ```
 
-> git diff
+> git diff HEAD
+
+changes that we've made since last HEAD. `git diff` will not shown the difference once the file has been added (`git add .`) since it is the unstaged changes wherease git diff HEAD will show the difference of all staged and unstagged changes.
+
+```terminal
+git diff (--staged or --cached) // will show difference of only stagged changes.
+```
+
+```terminal
+git diff --stagged file_name // to view of single file.
+```
+
+> Difference comparison between two branches.
+
+```terminal
+git diff master..another_branch
+```
+
+> companring changes in commits
+
+```terminal
+git diff commit_hash..ano_commit_hash //
+```
