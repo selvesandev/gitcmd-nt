@@ -63,4 +63,38 @@ git stash // remove or undo all the changes and save it for future
 
 ```terminal
 git stash pop // recover all the changes that had been stashed
+
+// or 
+
+git stash apply
+
+```
+
+Difference between pop and apply.
+
+1) Pop will recover all the stashed changed and remove it from the stash.
+2) Apply will recover all the stashed changed by will not remove it from the stash and can be applied in multiple places.
+
+> You can keep doing stash in order to add multiple stashed changes. The order is according to the stashed order.
+
+```terminal
+git stash list // to view all the stashed.
+```
+
+If you do `git stash pop` only the lates stash is going to be popped.
+
+To reference particular stashed changes you can used the stashed id.
+
+```terminal
+git stash apply stash@{2}
+```
+
+If you aren't using pop. You can manually remove stash.
+
+```terminal
+git stash drop@{1}
+```
+
+```terminal
+git stash clear // will remove all the stash.
 ```
