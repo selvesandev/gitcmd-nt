@@ -53,3 +53,14 @@ git diff master..another_branch
 ```terminal
 git diff commit_hash..ano_commit_hash //
 ```
+
+> stashing `git stash`
+To save my changes before actually making a commit. Remove all the changes that has been done but saving it which is recoverable.
+
+```terminal
+git stash // remove or undo all the changes and save it for future
+```
+
+```terminal
+git stash pop // recover all the changes that had been stashed
+```
