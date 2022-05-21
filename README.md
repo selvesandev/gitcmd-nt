@@ -117,3 +117,15 @@ Note: Again `git checkout HEAD~1` would when you are aready at `git checkout HEA
 If you keep doing `git checkout HEAD~1` then you would be going back to your commit where your current HEAD is -1 i.e previous commit.
 
 **`git checkout -` this would move you to the branch that you where right before current HEAD.**.
+
+example.
+
+```terminal
+//if you are currently at master.
+
+git checkout -b new-branch // will move you to new-branch
+
+git checkout - // will move you back to master. because you were previously at master.
+```
+
+> Discarding Changes `git checkout HEAD <file>` to remove all the uncommited changes from a file or reset all the changes from a file to make it look like your last commit. You can use the shorter version `git checkout -- <file or files>`.
