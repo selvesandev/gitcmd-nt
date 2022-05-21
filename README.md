@@ -128,4 +128,24 @@ git checkout -b new-branch // will move you to new-branch
 git checkout - // will move you back to master. because you were previously at master.
 ```
 
-> Discarding Changes `git checkout HEAD <file>` to remove all the uncommited changes from a file or reset all the changes from a file to make it look like your last commit. You can use the shorter version `git checkout -- <file or files>`.
+> Discarding Changes `git checkout HEAD <file>` You can use the shorter version `git checkout -- <file or files>`.
+
+To remove all the uncommited changes from a file or reset all the changes from a file to make it look like your last commit.
+
+`git restore <file>` also does the same (restore all the changes back to where it was).
+
+1) `git restore file.txt` is same as `git checkout HEAD file.txt`
+2) `git restore --source HEAD~2 app.js`. will change the file to 2 commit prior to HEAD for only `app.js`.
+3) `git restore app.js` will again change the file to the HEAD i.e the most recent commit.
+
+## GIT RESET
+
+> `git reset <commit_hash>` This will remove all the commits that after the mentioned hash but will not remove the changes. The changes will still be present in the files. i.e we do not loose the changes we only loose the commits.
+
+...
+
+> `git reset --hard <commit_hash>` This will remove all the commits that after the mentioned has and will also remove all the changes.
+
+## GIT REVERT
+
+> `git revert <commit-hash>`. Both revert and reset will undo changes from a commit. But the way they accomplish it is different. Reset removes commit entirely and moves the branch pointer backwards as if the commit never occured. Revert will do something different it will create a new commit and in that new commit it undoes the changes from an earlier commit instead of just deleting everything.
