@@ -98,3 +98,22 @@ git stash drop@{1}
 ```terminal
 git stash clear // will remove all the stash.
 ```
+
+> Cheking out to a commit.
+
+You are in a `detached HEAD` state. Head usually refers to a branch not to a specific commit.
+
+> Checking out to a commit with HEAD reference.
+
+1) HEAD~1 referes to the commit before HEAD (parent).
+2) HEAD~2 referes to the 2 commit before HEAD (grandparent).
+3) or HEAD~8 (HEAD~N)
+
+```terminal
+git checkout HEAD~1
+```
+
+Note: Again `git checkout HEAD~1` would when you are aready at `git checkout HEAD~1` then this would move your head to again to -1.  
+If you keep doing `git checkout HEAD~1` then you would be going back to your commit where your current HEAD is -1 i.e previous commit.
+
+**`git checkout -` this would move you to the branch that you where right before current HEAD.**.
