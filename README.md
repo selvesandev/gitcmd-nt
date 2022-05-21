@@ -14,9 +14,13 @@ For this to work your vscode path as to be setup as `code` in the terminal.
 git log --oneline
 ```
 
+## HEAD
+
 > HEAD (Branch Reference)
 
 A pointer that referes to a current location in a repository. It points to a particular branch location.
+
+## GIT SWITCH
 
 > Difference between `git switch` and `git checkout`.
 
@@ -29,6 +33,8 @@ git switch -c <branch-name> // create a new branch and switch to it.
 ```terminal
 git checkout -b <branch-name> // create a new branch and switch to it.
 ```
+
+## GIT DIFF
 
 > git diff HEAD
 
@@ -51,8 +57,10 @@ git diff master..another_branch
 > companring changes in commits
 
 ```terminal
-git diff commit_hash..ano_commit_hash //
+git diff commit_hash..ano_commit_hash
 ```
+
+## STASHING
 
 > stashing `git stash`
 To save my changes before actually making a commit. Remove all the changes that has been done but saving it which is recoverable.
@@ -99,6 +107,8 @@ git stash drop@{1}
 git stash clear // will remove all the stash.
 ```
 
+## GIT CHECKOUT TO COMMIT
+
 > Cheking out to a commit.
 
 You are in a `detached HEAD` state. Head usually refers to a branch not to a specific commit.
@@ -128,9 +138,13 @@ git checkout -b new-branch // will move you to new-branch
 git checkout - // will move you back to master. because you were previously at master.
 ```
 
+## DISCARDING CHANGES WITH CHECKOUT
+
 > Discarding Changes `git checkout HEAD <file>` You can use the shorter version `git checkout -- <file or files>`.
 
 To remove all the uncommited changes from a file or reset all the changes from a file to make it look like your last commit.
+
+## GIT RESTORE
 
 `git restore <file>` also does the same (restore all the changes back to where it was).
 
