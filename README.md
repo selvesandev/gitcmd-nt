@@ -173,3 +173,15 @@ git branch -r // checkout all the remote branches
 ```terminal
 git switch branch-name // check if the remote has this branch create this branch locally and checkout to this branch and link this branch with remote.
 ```
+
+## FETCH VS PULL
+
+Fetching allows us to download changes from a remote repo to local repository but those changes will not be integrated to our local files. It lets you see what others have been working on, without having to merge those changes.
+
+```terminal
+git fetch origin // will fetch all the remote changes but will not change our files.
+
+git status // to see the message -> Your branch is behind 'origin/master' by 1 commit
+
+git checkout origin/master // to check what are the changes
+```
