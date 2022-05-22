@@ -176,6 +176,8 @@ git switch branch-name // check if the remote has this branch create this branch
 
 ## FETCH VS PULL
 
+### FETCH
+
 Fetching allows us to download changes from a remote repo to local repository but those changes will not be integrated to our local files. It lets you see what others have been working on, without having to merge those changes.
 
 ```terminal
@@ -185,3 +187,16 @@ git status // to see the message -> Your branch is behind 'origin/master' by 1 c
 
 git checkout origin/master // to check what are the changes
 ```
+
+Remote branch are not automatically listed with `git branch -r`
+
+1) Create a new branch in your remote repository from github.
+2) `git branch -r` this will not list your remote branch because it is not present in your local repository.
+3) `git fetch` will fetch the remote repository but will not show up in the files system.
+4) `git branch -r` will not show the remote branch.
+
+### PULL
+
+Git pull is another command to retrieve from remote repository. Unlike fetch, pull actually updates our HEAD branch with whatever changes are retrived. `go and download data from github repo and immediately update my local repository`
+
+GIT PULL = **git fetch + git merge**
