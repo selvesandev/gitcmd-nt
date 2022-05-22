@@ -34,6 +34,8 @@ git switch -c <branch-name> // create a new branch and switch to it.
 git checkout -b <branch-name> // create a new branch and switch to it.
 ```
 
+**NOTE** `git switch` will also change the branch and if the branch is not in your local repository but in remote repository it is going to detech it and fetch if from the remote repository and switch to it.
+
 ## GIT DIFF
 
 > git diff HEAD
@@ -185,7 +187,7 @@ git fetch origin // will fetch all the remote changes but will not change our fi
 
 git status // to see the message -> Your branch is behind 'origin/master' by 1 commit
 
-git checkout origin/master // to check what are the changes
+git checkout origin/master // to check what are the changes (detached from HEAD)
 ```
 
 Remote branch are not automatically listed with `git branch -r`
@@ -197,6 +199,14 @@ Remote branch are not automatically listed with `git branch -r`
 
 ### PULL
 
+GIT PULL = **git fetch + git merge**
+
 Git pull is another command to retrieve from remote repository. Unlike fetch, pull actually updates our HEAD branch with whatever changes are retrived. `go and download data from github repo and immediately update my local repository`
 
-GIT PULL = **git fetch + git merge**
+The branch that you are in right now is going to be updated when you pull from any other remote branch. Git pull might have also have some merge conflicts.
+
+Shorter pull syntax.
+
+`git pull`
+
+This will fetch from the remote origin from the branch that you are on locally.
