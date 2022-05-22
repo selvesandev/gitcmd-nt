@@ -180,7 +180,7 @@ git switch branch-name // check if the remote has this branch create this branch
 
 ### FETCH
 
-Fetching allows us to download changes from a remote repo to local repository but those changes will not be integrated to our local files. It lets you see what others have been working on, without having to merge those changes.
+Fetching allows us to download changes from a remote repo to local(remote-tracking) repository but those changes will not be integrated to our local files (current HEAD). It lets you see what others have been working on, without having to merge those changes. Safe to do anytime.
 
 ```terminal
 git fetch origin // will fetch all the remote changes but will not change our files.
