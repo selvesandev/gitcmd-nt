@@ -210,3 +210,32 @@ Shorter pull syntax.
 `git pull`
 
 This will fetch from the remote origin from the branch that you are on locally.
+
+### GIST
+
+A simple way to share code snippist. Not sharing a whole repository.
+
+<https://gist.github.com/>
+
+### Github Pages
+
+You can get project sites and user sites. Only 1 user sites is available (selvesandev.github.io). Unlimited project sites can be hosted. (selvesandev.github.io/repo-name).
+
+Go to repository `Setting` > `Github Pages`
+
+### Collaborate on Open Source Project
+
+1) Fork the original repository.
+2) Clone your forked repository.
+3) Also add a remove origin to the main original project so that you can pull from it `git remote add upstream <your_main_project_repo_origin_url>`.
+4) Make you changes and pushed to your forked repository.
+5) Now that your forked repository is ahead from the original repository.
+6) Create a pull request to original repository.
+
+**To pull from upstream** repository
+
+```terminal
+git pull upstream main //main is the branch name.
+```
+
+### Rebasing
