@@ -239,3 +239,25 @@ git pull upstream main //main is the branch name.
 ```
 
 ### Rebasing
+
+Combining two branches can be done by `merging` or by `rebasing`.
+
+When you merge a feature or fix branch to `master` or `master` to your feature or fix branch. You will get a extra commit (merge commit) on your commit log.
+
+If there is large amount or number of the extra merge commit our history log is cluttered. It's muddied, uglier and hard to follow.
+
+So to make clean commit history and to group together all the commits in a logical way you minimize the number of those commits with git `rebase`.
+
+If you are on a feature or fix branch and run `git rebase master`. This will move all the commits in your feature or fix branch to the tip of your master branch's commit.
+
+When you have merge conflict when doing rebase your rebase process will be half done (not complete). In that situation you can do two things. `abort` or `continue`.
+
+```terminal
+git rebase --abort // useful when conflict on rebase.
+```
+
+or if you fix your merge conflict you can.
+
+```terminal
+git rebase --continue
+```
