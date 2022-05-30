@@ -281,7 +281,20 @@ git rebase -i HEAD~4
 git rebase -i HEAD~4
 ```
 
-This command will open the list of your commits and allow you to modify them with specific list of commands.
+This command will open the list of your commits and allow you to modify them with specific list of commands. The commands are
 
+> `pick` don't change anything just keep it like it was before.
 
+`edit`
 
+`squash`
+
+> `reword` to update the commit message. you can reword multiple at the same time.
+
+`edit`
+
+> `fixup` take the content of a commit and add it to another(previous) commit. Mark fixup to the commit whose file you want to move.
+
+`drop`
+
+**NOTE** all the subsequent commits after the rebase commit will change it's hash.
