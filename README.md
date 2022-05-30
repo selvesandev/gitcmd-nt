@@ -287,6 +287,8 @@ This command will open the list of your commits and allow you to modify them wit
 
 `edit`
 
+> `drop` to drop a commit.
+
 `squash`
 
 > `reword` to update the commit message. you can reword multiple at the same time.
@@ -294,7 +296,5 @@ This command will open the list of your commits and allow you to modify them wit
 `edit`
 
 > `fixup` take the content of a commit and add it to another(previous) commit. Mark fixup to the commit whose file you want to move.
-
-`drop`
 
 **NOTE** all the subsequent commits after the rebase commit will change it's hash.
