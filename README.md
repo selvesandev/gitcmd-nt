@@ -261,3 +261,27 @@ or if you fix your merge conflict you can.
 ```terminal
 git rebase --continue
 ```
+
+### Rebasing to rewrite history
+
+Besides using rebasing as an alternative to commit we can also use for clean up toop. we can
+
+1) edit commits.
+2) change the contents of a commit.
+3) we can drop or delete commit.
+4) we can re order commits.
+
+```terminal
+git rebase -i HEAD~4
+```
+
+#### Combine two commits as one
+
+```terminal
+git rebase -i HEAD~4
+```
+
+This command will open the list of your commits and allow you to modify them with specific list of commands.
+
+
+
