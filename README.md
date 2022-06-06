@@ -60,6 +60,10 @@ git diff --stagged file_name // to view of single file.
 git diff master..another_branch
 ```
 
+```terminal
+git diff master..dev -- composer.json  //a single file in two different branches.
+```
+
 > companring changes in commits
 
 ```terminal
