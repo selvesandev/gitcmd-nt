@@ -14,6 +14,10 @@ For this to work your vscode path as to be setup as `code` in the terminal.
 git log --oneline
 ```
 
+```terminal
+git log --oneline
+```
+
 ## HEAD
 
 > HEAD (Branch Reference)
@@ -298,3 +302,124 @@ This command will open the list of your commits and allow you to modify them wit
 > `fixup` take the content of a commit and add it to another(previous) commit. Mark fixup to the commit whose file you want to move.
 
 **NOTE** all the subsequent commits after the rebase commit will change it's hash.
+
+### Versioning
+
+* 1.0.0 = Major release
+* 1.0.1 = Patches / Fixes
+* 1.1.0 = Minor Release
+* 2.0.0 = Major Release that might not have backward compatibility and might have breaking changes.
+
+### Tags
+
+* List all tags
+
+```terminal
+git tag -l // list all
+
+
+git tag -l "*beta" // filter all tags that contains beta text.
+```
+
+We are in a detached mode if we checkout to a `tag`. Because `tag` always points to a commit.
+
+* Diff between two tags.
+
+```terminal
+git diff v17.0.0 v17.0.1
+```
+
+* Creating a tag.
+
+```terminal
+git tag <tag-name>
+```
+
+When a tag is created it will point to the commit wherever the HEAD is right now.
+
+* Anotated Tags
+
+will prompt you to an editor.
+
+```terminal
+git tag -a <tag-name>
+
+// or 
+
+git tag -m "message" <tag-name>
+
+```
+
+* View more information about a particular tag.
+
+```terminal
+git show <tag-name>
+```
+
+* Force a tag that already exists.
+
+```terminal
+git tag -f <tag_name>
+```
+
+* Delete a tag
+
+```terminal
+git tag -d <tag_name>
+```
+
+* Push tags
+
+```terminal
+git push <tag_name> //push single tags
+```
+
+```terminal
+git push --tags //push all tags
+```
+
+### Local Config File
+
+```terminal
+git config --local user.name "your_user_name" //write user name
+
+git config --local user.name // read user name
+
+```
+
+### Git Database
+
+Git is a key value data store. We can store any kind of data in it and it will hand us back a key for that data The keys that we get back are `sha-1` checksums which we use to retrive the data back.
+
+> Save value and get the encrypted key
+
+```terminal
+echo "hi" | git hash-object --stdin
+
+git hash-object <filename> //whenever the content of this file is changed a new sha-1 key will be generated
+```
+
+to write the value inside .git folder
+
+```terminal
+echo "hi" | git hash-object --stdin -w
+git hash-object <file_name> -w
+```
+
+> Retrive a value
+
+```terminal
+git cat-file -p <hash_code>
+
+git cat-file -p <hash_code> -p // [-p(pretty) is optional ]
+
+git cat-file -p <hash_code> > <file_name> // retrive and write to a file.
+```
+
+> Trees
+
+Tree is a store mechanism tabled structure of git contents. Tree are a git object used to store the contents of a directory. Each tree contains pointer that can refer to blob and to other trees. Each entry in a tree contains the `SHA-1` hash of a blob or tree, as well as the mode, type and file name.
+
+```terminal
+git cat-file -p master^{tree}
+```
