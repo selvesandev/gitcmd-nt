@@ -485,7 +485,7 @@ The global git file is at `~/.gitconfig`
         l = log
         a = add .
         cm = commit -m
-        
+
 ```
 
 or add alias from command line
@@ -494,3 +494,4 @@ or add alias from command line
   git config --global alias.b branch
 ```
 
+Now you can `git a && git cm "awesome" && git ph`
