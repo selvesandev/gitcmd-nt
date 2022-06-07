@@ -468,7 +468,6 @@ git reflog show master // to list the logs
 git reset --hard <commit_hash_that_you_found_in_the_reflog>
 ```
 
-
 > Reflog recover lost commit with rebase.
 
 As we know that the rebase rewrite commits and the old commit is gone.
