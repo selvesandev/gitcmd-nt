@@ -38,6 +38,10 @@ git switch -c <branch-name> // create a new branch and switch to it.
 git checkout -b <branch-name> // create a new branch and switch to it.
 ```
 
+```terminal
+git checkout master@{1.week.ago}
+```
+
 **NOTE** `git switch` will also change the branch and if the branch is not in your local repository but in remote repository it is going to detech it and fetch if from the remote repository and switch to it.
 
 ## GIT DIFF
@@ -62,6 +66,10 @@ git diff master..another_branch
 
 ```terminal
 git diff master..dev -- composer.json  //a single file in two different branches.
+```
+
+```terminal
+git diff master master@{yesterday}
 ```
 
 > companring changes in commits
@@ -443,7 +451,43 @@ All the logs in the reflog has a timestamp associated with it.
 ```terminal
 
 git reflog master@{one.week.ago}
+git reflog show HEAD@{2.days.ago}
+git reflog show HEAD@{1.minute.ago}
 
 ```
 
 NOTE **Will not go back over 90 days and will only work on local changes**
+
+> Reflog recover and rescue.
+
+If you have deleted your commits with `git reset <commit_hash> --hard`. You can still recover them with git `reflog`
+
+```terminal
+git reflog show master // to list the logs
+git reset --hard <commit_hash_that_you_found_in_the_reflog>
+```
+
+> Reflog recover lost commit with rebase.
+
+As we know that the rebase rewrite commits and the old commit is gone.
+
+### Git Config File
+
+```terminal
+git config --global user.name // read the username.
+```
+
+The global git file is at `~/.gitconfig`
+
+```.gitconfig
+[alias]
+        s = status
+        l = log
+        a = add .
+```
+
+or add alias from command line
+
+```terminal
+  git config --global alias.b branch
+```
