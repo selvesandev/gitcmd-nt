@@ -38,9 +38,6 @@ git switch -c <branch-name> // create a new branch and switch to it.
 git checkout -b <branch-name> // create a new branch and switch to it.
 ```
 
-```terminal
-git checkout master@{1.week.ago}
-```
 
 **NOTE** `git switch` will also change the branch and if the branch is not in your local repository but in remote repository it is going to detech it and fetch if from the remote repository and switch to it.
 
@@ -454,6 +451,10 @@ git reflog master@{one.week.ago}
 git reflog show HEAD@{2.days.ago}
 git reflog show HEAD@{1.minute.ago}
 
+```
+
+```terminal
+git checkout master@{1.week.ago}
 ```
 
 NOTE **Will not go back over 90 days and will only work on local changes**
