@@ -484,6 +484,7 @@ The global git file is at `~/.gitconfig`
         s = status
         l = log
         a = add .
+        cm = commit -m
 ```
 
 or add alias from command line
@@ -491,3 +492,4 @@ or add alias from command line
 ```terminal
   git config --global alias.b branch
 ```
+
