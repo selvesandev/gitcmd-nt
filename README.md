@@ -423,3 +423,23 @@ Tree is a store mechanism tabled structure of git contents. Tree are a git objec
 ```terminal
 git cat-file -p master^{tree}
 ```
+
+### Reflog
+
+Reflog is a history of actions that was done in git.
+
+```terminal
+git reflog show HEAD
+```
+
+> Reflog references (Time references)
+
+All the logs in the reflog has a timestamp associated with it.
+
+```terminal
+
+git reflog master@{one.week.ago}
+
+```
+
+NOTE **Will not go back over 90 days and will only work on local changes**
