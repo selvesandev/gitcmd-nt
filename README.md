@@ -485,6 +485,7 @@ The global git file is at `~/.gitconfig`
         l = log
         a = add .
         cm = commit -m
+        
 ```
 
 or add alias from command line
