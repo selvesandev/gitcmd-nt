@@ -179,6 +179,10 @@ To remove all the uncommited changes from a file or reset all the changes from a
 
 > `git revert <commit-hash>`. Both revert and reset will undo changes from a commit. But the way they accomplish it is different. Reset removes commit entirely and moves the branch pointer backwards as if the commit never occured. Revert will do something different it will create a new commit and in that new commit it undoes the changes from an earlier commit instead of just deleting everything.
 
+```
+git revert -m 1 <merge-commit> // remove mistakely done merge.
+```
+
 ## Remote Branch
 
 ```terminal
