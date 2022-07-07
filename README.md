@@ -159,6 +159,16 @@ git checkout - // will move you back to master. because you were previously at m
 
 To remove all the uncommited changes from a file or reset all the changes from a file to make it look like your last commit.
 
+## AMEND
+
+Let's say we've edited a few files that we would like to commit in a single snapshot, but then we forget to add one of the files the first time around
+
+```terminal
+git add .
+
+git commit --amend --no-edit
+```
+
 ## GIT RESTORE
 
 `git restore <file>` also does the same (restore all the changes back to where it was).
