@@ -510,3 +510,16 @@ or add alias from command line
 ```
 
 Now you can `git a && git cm "awesome" && git ph`
+
+
+## OTHER HELPFUL COMMANDS
+
+If you are mistakely ahead of origin/[branch] and want to remove all the changes that are ahead of origin
+
+```terminal
+
+git reset --hard origin/[branch_name]
+
+// eg: git reset --hard origin/master
+
+```
