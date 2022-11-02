@@ -169,6 +169,13 @@ git add .
 git commit --amend --no-edit
 ```
 
+In order to rename the commit you've just made 
+```terminal
+git commit --amend -m "your new message"
+```
+
+**NOTE** This only works if you haven't pushed your code in remote repository. However you can --force which is dangerous. `git push origin master --force`
+
 ## GIT RESTORE
 
 `git restore <file>` also does the same (restore all the changes back to where it was).
@@ -191,6 +198,10 @@ git commit --amend --no-edit
 
 ```
 git revert -m 1 <merge-commit> // remove mistakely done merge.
+```
+
+```
+git revert better-days // allows you to revert one commit.
 ```
 
 ## Remote Branch
