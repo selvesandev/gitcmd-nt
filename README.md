@@ -8,7 +8,7 @@ git config --global core.editor "code --wait"
 
 For this to work your vscode path as to be setup as `code` in the terminal.
 
-> View only a line of git commmit
+> View only a line of git commmit logs
 
 ```terminal
 git log --oneline
@@ -16,6 +16,12 @@ git log --oneline
 
 ```terminal
 git log --oneline
+```
+
+> view log with graphics
+
+```terminal
+git log --graph --oneline --decorate
 ```
 
 ## HEAD
